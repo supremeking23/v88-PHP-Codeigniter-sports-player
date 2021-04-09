@@ -1,0 +1,16 @@
+.background {
+	background: red;
+}
+
+dt,
+dd {
+	display: inline-block;
+}
+
+p span {
+	font-weight: bold;
+}
+
+form.delete-form {
+	display: inline-block;
+}
