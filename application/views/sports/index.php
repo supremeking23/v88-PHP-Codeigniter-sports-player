@@ -12,7 +12,7 @@ $sports_id = $this->session->userdata("sports");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sports Player CI</title>
     <link rel="stylesheet/less" type="text/css" href="<?= base_url()?>assets/less/styles.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
 </head>
