@@ -30,10 +30,16 @@ class Player extends CI_Model {
             // $sport7 = (isset($search_detail['sports'][6]) ? $search_detail['sports'][6] : NULL);
             $query .= " AND (";
             // $query .= "sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ?";
-            $query .= "sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ?";
+            // $query .= "sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ?";
+            $query .= "sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ? OR sports_id = ?";
             $query .=")";
         }
+
+
+
         if(!(is_null($search_detail['sports'])) AND !(is_null($search_detail['gender']))){
+
+            // $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"),(isset($gender1) ? $gender1 : ""),(isset($gender2) ? $gender2 : ""),(isset($sport1) ? $sport1 : ""),(isset($sport2) ? $sport2 : ""),(isset($sport3) ? $sport3 : ""),(isset($sport4) ? $sport4 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport6) ? $sport6 : ""));
 
             $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"),(isset($gender1) ? $gender1 : ""),(isset($gender2) ? $gender2 : ""),(isset($sport1) ? $sport1 : ""),(isset($sport2) ? $sport2 : ""),(isset($sport3) ? $sport3 : ""),(isset($sport4) ? $sport4 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport6) ? $sport6 : ""));
 
@@ -45,7 +51,9 @@ class Player extends CI_Model {
 
             // $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"),(isset($sport1) ? $sport1 : ""),(isset($sport2) ? $sport2 : ""),(isset($sport3) ? $sport3 : ""),(isset($sport4) ? $sport4 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport6) ? $sport6 : ""),(isset($sport7) ? $sport7 : ""));
 
-            $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"),(isset($sport1) ? $sport1 : ""),(isset($sport2) ? $sport2 : ""),(isset($sport3) ? $sport3 : ""),(isset($sport4) ? $sport4 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport6) ? $sport6 : ""));
+            // $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"),(isset($sport1) ? $sport1 : ""),(isset($sport2) ? $sport2 : ""),(isset($sport3) ? $sport3 : ""),(isset($sport4) ? $sport4 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport6) ? $sport6 : ""));
+
+            $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"),(isset($sport1) ? $sport1 : ""),(isset($sport2) ? $sport2 : ""),(isset($sport3) ? $sport3 : ""),(isset($sport4) ? $sport4 : ""),(isset($sport5) ? $sport5 : ""),(isset($sport6) ? $sport6 : ""));
 
         }else{
             $values = array($this->mysqli_real_escape_string("%{$search_detail['name']}%"));

@@ -53,7 +53,9 @@ class Sports extends CI_Controller {
        	$data['users'] = $this->player->get_all_players($search_detail);
 		$data['sports'] = $this->sport->get_all_sports();
 		// var_dump($this->player->get_all_players($search_detail));
+		// var_dump($this->player->get_all_players($search_detail));
 		$this->load->view('sports/index',$data);
+		$this->session->sess_destroy();
         // 
 
         
@@ -74,7 +76,7 @@ class Sports extends CI_Controller {
 
 		$this->session->set_userdata($players_detail);
 		redirect(base_url());
-        // var_dump($check);
+        // var_dump($players_detail);
     }
 
    
